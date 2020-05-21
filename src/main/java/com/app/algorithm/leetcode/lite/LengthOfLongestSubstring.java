@@ -18,7 +18,6 @@ public class LengthOfLongestSubstring {
         log.info("length:{}", length5);
     }
 
-    /* 贪心算法需要考虑边界情况 非最优解  */
     public static int lengthOfLongestSubstring(String s) {
         char[] tmpChars = new char[128];
 
