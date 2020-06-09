@@ -34,7 +34,7 @@ public class LevelOrderBottom {
         root.right = new TreeNode(3);
         root.left.left = new TreeNode(4);
         List<List<Integer>> lists = levelOrderBottom(root);
-        log.info("maxDepth:{}", root);
+        log.info("levelOrderBottom:{}", lists);
     }
 
     public static List<List<Integer>> levelOrderBottom(TreeNode root) {
