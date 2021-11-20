@@ -24,23 +24,6 @@ public class Leetcode_3 {
         log.info("length:{}", length5);
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public static int lengthOfLongestSubstring(String s) {
         if (s.length() == 0) return 0;
         Map<Character, Integer> map = new HashMap<>();
