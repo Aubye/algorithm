@@ -1,6 +1,5 @@
 package com.app.algorithm.leetcode;
 
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -29,13 +28,19 @@ public class Leetcode_2 {
         log.info("finish, reuslt:{}", reuslt);
     }
 
-    @Data
-    static class ListNode {
-        int value;
+    static public class ListNode {
+        int val;
         ListNode next;
 
-        public ListNode(int value, ListNode next) {
-            this.value = value;
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
             this.next = next;
         }
     }
@@ -47,8 +52,8 @@ public class Leetcode_2 {
         ListNode prev2 = l2;
         boolean flag = false;
         while (prev1 != null || prev2 != null) {
-            int v1 = prev1 != null ? prev1.value : 0;
-            int v2 = prev2 != null ? prev2.value : 0;
+            int v1 = prev1 != null ? prev1.val : 0;
+            int v2 = prev2 != null ? prev2.val : 0;
             int sum = v1 + v2;
             if (flag) {
                 sum = sum + 1;
