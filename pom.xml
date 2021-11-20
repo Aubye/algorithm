@@ -17,9 +17,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <guava.version>29.0-jre</guava.version>
-        <logback.version>1.2.3</logback.version>
-        <lombok.version>1.18.12</lombok.version>
+        <guava.version>31.0.1-jre</guava.version>
+        <logback.version>1.2.7</logback.version>
+        <lombok.version>1.18.22</lombok.version>
 
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
