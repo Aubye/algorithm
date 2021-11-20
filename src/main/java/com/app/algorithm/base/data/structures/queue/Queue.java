@@ -1,4 +1,4 @@
-package org.learning.base.data.structures.queue;
+package com.app.algorithm.base.data.structures.queue;
 
 public interface Queue<T> {
 

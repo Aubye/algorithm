@@ -1,8 +1,10 @@
-package org.learning.base.data.structures.queue;
+package com.app.algorithm.base.data.structures.queue;
 
 public class ArrayQueue<T> implements Queue<T> {
 
-    /** 初始容量为16 */
+    /**
+     * 初始容量为16
+     */
     private static final int DEFAULT_SIZE = 2 << 3;
 
     private Object[] queue;

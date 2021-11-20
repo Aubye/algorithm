@@ -1,4 +1,4 @@
-package org.learning.base.algorithm.sort;
+package com.app.algorithm.base.algorithm.sort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -26,10 +26,10 @@ public class QuickSort {
     }
 
     private static void sort(int[] items, int left, int right) {
-        if(left < right) {
+        if (left < right) {
             int center = partition(items, left, right);
-            sort(items, left,center - 1);
-            sort(items,center + 1, right);
+            sort(items, left, center - 1);
+            sort(items, center + 1, right);
         }
     }
 
@@ -56,10 +56,10 @@ public class QuickSort {
 
     private static void sort2(int[] items, int left, int right) {
         int center;
-        if(left < right) {
+        if (left < right) {
             center = partition2(items, left, right);
-            sort2(items, left,center - 1);
-            sort2(items,center + 1, right);
+            sort2(items, left, center - 1);
+            sort2(items, center + 1, right);
         }
     }
 
@@ -127,29 +127,29 @@ public class QuickSort {
 
     public static void main(String[] args) {
         System.out.println("-------- sort --------");
-        int[] items = new int[] {8, 1, 3, 2, 7, 6, 4};
+        int[] items = new int[]{8, 1, 3, 2, 7, 6, 4};
         sort(items);
         System.out.println("items:" + Arrays.toString(items));
 
-        int[] items2 = new int[] {8, 1, 3, 2, 7, 6, 4, 10, 12, 2, 3};
+        int[] items2 = new int[]{8, 1, 3, 2, 7, 6, 4, 10, 12, 2, 3};
         sort(items2);
         System.out.println("items2:" + Arrays.toString(items2));
 
         System.out.println("-------- quickSort --------");
-        int[] items3 = new int[] {8, 1, 3, 2, 7, 6, 4};
+        int[] items3 = new int[]{8, 1, 3, 2, 7, 6, 4};
         quickSort(items3);
         System.out.println("items3:" + Arrays.toString(items3));
 
-        int[] items4 = new int[] {8, 1, 3, 2, 7, 6, 4, 10, 12, 2, 3};
+        int[] items4 = new int[]{8, 1, 3, 2, 7, 6, 4, 10, 12, 2, 3};
         quickSort(items4);
         System.out.println("items4:" + Arrays.toString(items4));
 
         System.out.println("-------- quickRandomSort --------");
-        int[] items5 = new int[] {8, 1, 3, 2, 7, 6, 4};
+        int[] items5 = new int[]{8, 1, 3, 2, 7, 6, 4};
         quickRandomSort(items5);
         System.out.println("items3:" + Arrays.toString(items5));
 
-        int[] items6 = new int[] {8, 1, 3, 2, 7, 6, 4, 10, 12, 2, 3};
+        int[] items6 = new int[]{8, 1, 3, 2, 7, 6, 4, 10, 12, 2, 3};
         quickRandomSort(items6);
         System.out.println("items4:" + Arrays.toString(items6));
     }

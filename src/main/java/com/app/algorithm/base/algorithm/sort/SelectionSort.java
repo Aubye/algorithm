@@ -1,4 +1,4 @@
-package org.learning.base.algorithm.sort;
+package com.app.algorithm.base.algorithm.sort;
 
 import java.util.Arrays;
 
@@ -29,11 +29,11 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        int[] items = new int[] {8, 1, 3, 2, 7, 6, 4};
+        int[] items = new int[]{8, 1, 3, 2, 7, 6, 4};
         sort(items);
         System.out.println("items:" + Arrays.toString(items));
 
-        int[] items2 = new int[] {8, 1, 3, 2, 7, 6, 4, 10, 12, 2, 3};
+        int[] items2 = new int[]{8, 1, 3, 2, 7, 6, 4, 10, 12, 2, 3};
         sort(items2);
         System.out.println("items2:" + Arrays.toString(items2));
     }

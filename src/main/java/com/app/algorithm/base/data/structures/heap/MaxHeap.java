@@ -1,4 +1,4 @@
-package org.learning.base.data.structures.heap;
+package com.app.algorithm.base.data.structures.heap;
 
 public class MaxHeap {
 
@@ -8,7 +8,9 @@ public class MaxHeap {
 
     private int count;
 
-    /** initCapacity = 16 */
+    /**
+     * initCapacity = 16
+     */
     private int capacity = 2 << 3;
 
     public MaxHeap() {
@@ -42,18 +44,18 @@ public class MaxHeap {
 
     //如果有子节点的值大于父节点,那么子节点k的父节点为k/2,将其上浮至合适节点
     private void swim(int k) {
-        while (k > 1 && less(k/2, k)) {
-            swap(k/2, k);
-            k = k/2;
+        while (k > 1 && less(k / 2, k)) {
+            swap(k / 2, k);
+            k = k / 2;
         }
     }
 
     //如果有子节点的值大于父节点
     private void sink(int k) {
         //2*k是k的左子节点,注意不要超过堆底
-        while (2*k <= count) {
+        while (2 * k <= count) {
             //j(2*k)是替换标识
-            int j = 2*k;
+            int j = 2 * k;
             //(j+1)2*k+1是k的右子节点,注意不要超过堆底
             //如果左子节点小于右子节点,将j替换标识移动至右子节点
             if (j < count && less(j, j + 1)) {

@@ -1,4 +1,4 @@
-package org.learning.base.algorithm.sort;
+package com.app.algorithm.base.algorithm.sort;
 
 import com.google.common.collect.Lists;
 

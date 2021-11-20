@@ -1,5 +1,8 @@
-package org.learning.base.data.structures.link;
+package com.app.algorithm.base.data.structures.link;
 
+import lombok.Data;
+
+@Data
 public class LinkedNode<T> {
 
     private T data;
@@ -14,19 +17,4 @@ public class LinkedNode<T> {
         this.next = next;
     }
 
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
-
-    public LinkedNode<T> getNext() {
-        return next;
-    }
-
-    public void setNext(LinkedNode<T> next) {
-        this.next = next;
-    }
 }

@@ -16,25 +16,26 @@ public class LengthOfLongestSubstring {
         log.info("length:{}", length4);
         int length5 = lengthOfLongestSubstring("ckilbkd");
         log.info("length:{}", length5);
+        int length6 = lengthOfLongestSubstring("cbaa");
+        log.info("length:{}", length6);
     }
 
     public static int lengthOfLongestSubstring(String s) {
         char[] tmpChars = new char[128];
-
         int startIndex = 0;
         int maxLength = 0;
-
         char[] targetChars = s.toCharArray();
         for (int i = 0; i < targetChars.length; i++) {
             char targetChar = targetChars[i];
             int targetInt = (int) targetChar;
             if (tmpChars[targetInt] != 0) {
                 for (int j = startIndex; j < i; j++) {
+                    tmpChars[j] = 0;
                     if (targetChar == targetChars[j]) {
                         startIndex = j + 1;
+                        j = i;
                     }
                 }
-                tmpChars[targetInt] = 0;
             }
             tmpChars[targetChar] = targetChar;
             int length = i - startIndex + 1;

@@ -1,4 +1,4 @@
-package org.learning.base.data.structures.stack;
+package com.app.algorithm.base.data.structures.stack;
 
 import java.util.Arrays;
 

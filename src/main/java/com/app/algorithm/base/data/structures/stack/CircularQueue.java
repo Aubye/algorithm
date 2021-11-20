@@ -1,6 +1,6 @@
-package org.learning.base.data.structures.stack;
+package com.app.algorithm.base.data.structures.stack;
 
-import org.learning.base.data.structures.queue.Queue;
+import com.app.algorithm.base.data.structures.queue.Queue;
 
 public class CircularQueue<T> implements Queue<T> {
 

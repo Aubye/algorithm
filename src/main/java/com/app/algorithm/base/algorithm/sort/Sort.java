@@ -1,4 +1,4 @@
-package org.learning.base.algorithm.sort;
+package com.app.algorithm.base.algorithm.sort;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ public class Sort {
     }
 
     public static void main(String[] args) {
-        int[] items = new int[] {8, 1, 3, 2, 7, 6, 4};
+        int[] items = new int[]{8, 1, 3, 2, 7, 6, 4};
         sort(items);
         System.out.println("items:" + Arrays.toString(items));
     }

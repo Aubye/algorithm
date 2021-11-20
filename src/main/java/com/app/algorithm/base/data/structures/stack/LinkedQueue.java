@@ -1,7 +1,7 @@
-package org.learning.base.data.structures.stack;
+package com.app.algorithm.base.data.structures.stack;
 
-import org.learning.base.data.structures.link.LinkedNode;
-import org.learning.base.data.structures.queue.Queue;
+import com.app.algorithm.base.data.structures.link.LinkedNode;
+import com.app.algorithm.base.data.structures.queue.Queue;
 
 public class LinkedQueue<T> implements Queue<T> {
 
