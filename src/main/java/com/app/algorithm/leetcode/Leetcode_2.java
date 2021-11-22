@@ -24,8 +24,10 @@ public class Leetcode_2 {
         l2.next.next.next = new ListNode(4, null);
         l2.next.next.next.next = new ListNode(5, null);
         //056801
-        ListNode reuslt = addTwoNumbers(l1, l2);
-        log.info("finish, reuslt:{}", reuslt);
+        ListNode result = addTwoNumbers(l1, l2);
+        log.info("finish, result:{}", result);
+        ListNode result1 = addTwoNumbers1(l1, l2);
+        log.info("finish, result1:{}", result1);
     }
 
     static public class ListNode {
@@ -62,6 +64,37 @@ public class Leetcode_2 {
             ListNode listNode = new ListNode(num, null);
             prev.next = listNode;
             prev = listNode;
+            prev1 = prev1 != null ? prev1.next : null;
+            prev2 = prev2 != null ? prev2.next : null;
+            if (sum >= 10) {
+                flag = true;
+                continue;
+            }
+            flag = false;
+        }
+        if (flag) {
+            prev.next = new ListNode(1, null);
+        }
+        return node.next;
+    }
+
+    private static ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
+        ListNode node = new ListNode(0, null);
+        ListNode prev = node;
+        ListNode prev1 = l1;
+        ListNode prev2 = l2;
+        boolean flag = false;
+        while (prev1 != null || prev2 != null) {
+            int v1 = prev1 != null ? prev1.val : 0;
+            int v2 = prev2 != null ? prev2.val : 0;
+            int sum = v1 + v2;
+            if (flag) {
+                sum = sum + 1;
+            }
+            int num = sum % 10;
+            ListNode current = new ListNode(num, null);
+            prev.next = current;
+            prev = current;
             prev1 = prev1 != null ? prev1.next : null;
             prev2 = prev2 != null ? prev2.next : null;
             if (sum >= 10) {

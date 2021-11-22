@@ -112,4 +112,22 @@ public class Leetcode_3 {
         return maxLength;
     }
 
+    public static int lengthOfLongestSubstring3(String s) {
+        if (s.length() == 0) {
+            return 0;
+        }
+        Map<Character, Integer> hashMap = new HashMap<>();
+        int begin = 0;
+        int maxLen = 0;
+        char[] charArray = s.toCharArray();
+        for (int i = 0; i < charArray.length; i++) {
+            if (hashMap.containsKey(charArray[i])) {
+                begin = Math.max(begin, hashMap.get(charArray[i]) + 1);
+            }
+            maxLen = Math.max(maxLen, i - begin + 1);
+            hashMap.put(charArray[i], i);
+        }
+        return maxLen;
+    }
+
 }
