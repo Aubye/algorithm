@@ -5,6 +5,23 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Leetcode_2 {
 
+    static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
     /**
      * 给你两个非空 的链表，表示两个非负的整数。它们每位数字都是按照逆序的方式存储的，并且每个节点只能存储一位数字。
      * 请你将两个数相加，并以相同形式返回一个表示和的链表。
@@ -28,23 +45,6 @@ public class Leetcode_2 {
         log.info("finish, result:{}", result);
         ListNode result1 = addTwoNumbers1(l1, l2);
         log.info("finish, result1:{}", result1);
-    }
-
-    static public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 
     private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
